@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎟️ Watch Your Show 🎟️</h1>
+
+        <!-- Movie List Section -->
+        <div class="movie-list">
+            <div class="movie" onclick="redirectToMovie('Avengers: Endgame', 250, 'avenn.jpg')">
+                <img src="avenn.jpg" alt="Avengers: Infinity war">
+                <h3>Avengers: Endgame</h3>
+            </div>
+
+            <div class="movie" onclick="redirectToMovie('Inception', 250, 'incep.jpg')">
+                <img src="incep.jpg" alt="Inception">
+                <h3>Inception</h3>
+            </div>
+
+            <div class="movie" onclick="redirectToMovie('Spider-Man: No Way Home', 250, 'spider.jp')">
+                <img src="spider.jpg" alt="Spider-Man: No Way Home">
+                <h3>Spider-Man: No Way Home</h3>
+            </div>
+
+            <div class="movie" onclick="redirectToMovie('The Batman', 250, 'batman.jpg')">
+                <img src="batman.jpg" alt="The Batman">
+                <h3>The Batman</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToMovie(name, price, image) {
+            window.location.href = `movie.html?name=${encodeURIComponent(name)}&price=${price}&image=${encodeURIComponent(image)}`;
+        }
+    </script>
+</body>
+</html>

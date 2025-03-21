@@ -1,0 +1,233 @@
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('red.jpg') no-repeat center center/cover;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #c8ad15;
+    text-align: center;
+}
+
+/* Movie List */
+.movie-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+/* Individual Movie */
+.movie {
+    width: 220px;
+    cursor: pointer;
+    background: #302937;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.movie:hover {
+    transform: scale(1.1);
+}
+
+.movie img {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.movie h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Movie Details Section */
+.movie-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Movie Poster */
+.movie-banner {
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    object-position: middle
+}
+
+/* Movie Title & Price */
+.movie-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #c8ad15;
+}
+
+.movie-price {
+    font-size: 22px;
+    color: #f5a623;
+    margin-bottom: 15px;
+}
+
+/* Screen Section */
+.screen {
+    background-color: #ffffff;
+    height: 50px;
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.5);
+}
+
+.screen-display {
+    line-height: 40px;
+    color: #342f3a;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Seat Layout */
+.seat-container {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 8px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+/* Individual Rows */
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+/* Seat Styling */
+.seat {
+    background-color: #444;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Seat States */
+.seat.occupied {
+    background-color: #af0505;
+    cursor: not-allowed;
+}
+
+.seat.selected {
+    background-color: #4caf50;
+}
+
+/* Seat Info */
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.info li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.info li div {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+/* Summary Section */
+.summary {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Checkout Button */
+#checkout-btn {
+    background-color: #f5a623;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-btn:hover {
+    background-color: #e5940b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .movie-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie {
+        width: 80%;
+    }
+
+    .seat-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
