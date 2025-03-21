@@ -16,11 +16,12 @@ body {
 }
 
 /* Main Container */
-.container {
+.containerone {
     width: 80%;
     max-width: 1200px;
     background: rgba(0, 0, 0, 0.85);
     color: #fff;
+    margin-top: 5%;
     padding: 20px;
     border-radius: 12px;
     text-align: center;
@@ -33,7 +34,7 @@ body {
 /* Heading */
 h1 {
     margin-bottom: 20px;
-    font-size: 36px;
+    font-size: 24px;
     color: #c8ad15;
     text-align: center;
 }
@@ -86,11 +87,12 @@ h1 {
 
 /* Movie Poster */
 .movie-banner {
-    width: 50%;
+    width: 30%;
     max-width: 400px;
-    height: auto;
+    height: 40%;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-top: 300px;
+    padding: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -100,9 +102,8 @@ h1 {
 
 /* Movie Title & Price */
 .movie-title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px;
     color: #c8ad15;
 }
 
